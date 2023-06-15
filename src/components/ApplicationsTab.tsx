@@ -160,7 +160,7 @@ export const ApplicationsTab: React.FC = () => {
       });
 
       setTableData(results);
-      //localStorage.setItem("tableData", JSON.stringify(results));
+      localStorage.setItem("tableData", JSON.stringify(results));
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {

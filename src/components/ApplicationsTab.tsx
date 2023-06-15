@@ -41,16 +41,7 @@ type TableData = {
 };
 
 type ApplicationData = {
-  ConsumedQuantity: string;
   Cost: string;
-  Date: string;
-  InstanceId: string;
-  Location: string;
-  MeterCategory: string;
-  ResourceGroup: string;
-  ResourceLocation: string;
-  ServiceName: string;
-  UnitOfMeasure: string;
 }[];
 
 function TablePaginationActions(props: TablePaginationActionsProps) {
@@ -169,7 +160,7 @@ export const ApplicationsTab: React.FC = () => {
       });
 
       setTableData(results);
-      localStorage.setItem("tableData", JSON.stringify(results));
+      //localStorage.setItem("tableData", JSON.stringify(results));
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
